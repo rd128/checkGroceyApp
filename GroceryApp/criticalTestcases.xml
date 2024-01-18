@@ -1,0 +1,17 @@
+<suite name="grocery app critical test cases">
+
+	<test name="critical">
+		<groups>
+			<run>
+				
+	
+				<include name="critical"></include>
+			</run>
+		</groups>
+		<classes>
+			
+			<class name="groceryTestCases.LoginTestcase">
+			</class>
+		</classes>
+	</test>
+</suite>
