@@ -1,0 +1,12 @@
+<suite name="GroceryApplication">
+	<test name="Basic Test Cases">
+		<classes>
+
+			<class name="groceryTestCases.LoginTestcase"></class>
+			<class name="groceryTestCases.HomePageTestCase"></class>
+			<class name="groceryTestCases.ManageOrderTestcase"></class>
+			<class name="groceryTestCases.SearchPageTestCase"></class>
+			<class name="groceryTestCases.ManageSliderTestCase"></class>
+		</classes>
+	</test>
+</suite>

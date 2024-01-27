@@ -26,7 +26,8 @@ public class ManageOrderTestcase extends BaseClass{
 	  ManageOrdersPage mop=new ManageOrdersPage(driver);
 	  mop.clickOnSearchButtonInManageOrdersPage();
 	  SearchPage sp=new SearchPage(driver);
-	  sp.enterOrderId(ReadDataFromExcel.GetStringdata(0, 1));
+	  System.out.println(ReadDataFromExcel.GetStringdata(0,1));
+	  sp.enterOrderId(ReadDataFromExcel.GetStringdata(0,1));
 	  sp.clickSearch();
 	  String actual=sp.getPayementMode();
 	  String expected="Bank";

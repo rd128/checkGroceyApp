@@ -1,0 +1,24 @@
+<suite name="grocery app critical test cases" parallel="tests" thread-count="3">>
+
+	<test name="chrome test">
+	 <parameter name="browser1" value="Chrome"> </parameter>
+		
+		<classes>
+			<class name="groceryTestCases.LoginTestcase">
+
+			</class>
+		</classes>
+	</test>
+	
+	<test name="edge test">
+	 <parameter name="browser1" value="Edge"> </parameter>
+		
+		<classes>
+			<class name="groceryTestCases.LoginTestcase">
+
+			</class>
+		</classes>
+	</test>
+	
+	
+</suite>

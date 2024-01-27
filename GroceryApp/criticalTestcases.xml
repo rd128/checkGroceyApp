@@ -12,6 +12,9 @@
 			
 			<class name="groceryTestCases.LoginTestcase">
 			</class>
+				
+			<class name="groceryTestCases.HomePageTestCase">
+			</class>
 		</classes>
 	</test>
 </suite>
