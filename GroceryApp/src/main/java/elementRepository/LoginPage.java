@@ -28,6 +28,8 @@ public class LoginPage {
 	@FindBy(xpath="//label[@for='remember']")
 	WebElement remebermeCheckbox;
 	
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")
+	WebElement invalideuserError;
 	
 	
 	public void enterusername(String usernameValue) {
@@ -40,10 +42,19 @@ public class LoginPage {
 	public void clickLoginbutton() {
 		gu.clickButton(loginButton);
 	}
-	public Boolean clickRememberMeCheckBox() {
+	
+	public void clickRememberCheckBox() {
 		gu.clickButton(remebermeCheckbox);
-		return remebermeCheckbox.isSelected();
+	}
+	public Boolean clickRememberMeCheckBoxStatus() {
 		
+		return gu.checkBoxselected(remebermeCheckbox);
+		
+	}
+	
+	public String getInvalidUserErrorMessage() {
+		System.out.println(invalideuserError.getText());
+		return invalideuserError.getText();
 	}
 
 }

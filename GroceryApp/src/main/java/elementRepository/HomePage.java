@@ -1,5 +1,6 @@
 package elementRepository;
 
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +23,8 @@ public class HomePage {
 	
 	@FindBy(xpath="//span[text()='7rmart supermarket']")
 	WebElement homePageText;
+	
+	public String xpathHomePageText="//span[text()='7rmart supermarket']";
 	
 	@FindBy(xpath="(//a[@href='https://groceryapp.uniqassosiates.com/admin/list-order'])[1]")
 	WebElement manageOrders;

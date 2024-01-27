@@ -1,7 +1,11 @@
 package utilities;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GeneralUtilities {
 	
@@ -31,5 +35,10 @@ public class GeneralUtilities {
 		 element.sendKeys(String.valueOf(value));
 		
 	}
+	public Boolean checkBoxselected(WebElement element) {
+		return element.isSelected();
+	}
+	
+	
 
 }

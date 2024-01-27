@@ -21,6 +21,7 @@ import org.testng.annotations.AfterMethod;
 public class BaseClass {
 
 	WebDriver driver;
+	
 	public static Properties properties;
 	
 	// ref variable for properties class

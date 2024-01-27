@@ -21,12 +21,12 @@ public class HomePageTestCase extends BaseClass {
 		lp.clickLoginbutton();
 		HomePage hp = new HomePage(driver);
 		String actual = hp.getHomePageText();
-		String expected = "7rmart supermarket***";
+		String expected = "7rmart supermarket";
 		Assert.assertEquals(actual, expected, Constant.error);
 
 	}
 
-	@Test
+	@Test(groups = { "critical" })
 	public void verifyColoroftheLinkBlock() throws IOException {
 		LoginPage lp = new LoginPage(driver);
 		readFromProperties();
