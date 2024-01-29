@@ -64,7 +64,7 @@ public class LoginTestcase extends BaseClass {
 		
 		System.out.println(lp.getInvalidUserErrorMessage());
 		String actual=lp.getInvalidUserErrorMessage();
-		String expected="Ã—\n"
+		String expected="×\n"
 				+ "Alert!\n"
 				+ "Invalid Username/Password";
 		Assert.assertEquals(actual, expected);
