@@ -68,5 +68,6 @@ public class LoginTestcase extends BaseClass {
 				+ "Alert!\n"
 				+ "Invalid Username/Password";
 		Assert.assertEquals(actual, expected);
+		
 	}
 }
