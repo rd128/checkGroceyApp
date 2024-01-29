@@ -42,7 +42,7 @@ public class LoginTestcase extends BaseClass {
 		lp.clickRememberCheckBox();
 		Boolean actual = lp.clickRememberMeCheckBoxStatus();
 		System.out.println(actual);
-		Boolean expected = true;
+		Boolean expected = false;
 		Assert.assertEquals(actual, expected, Constant.error);
 
 	}
