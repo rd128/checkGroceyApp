@@ -61,7 +61,7 @@ public class LoginTestcase extends BaseClass {
 		lp.enterusername(name);
 		lp.enterPassword(password);
 		lp.clickLoginbutton();
-		HomePage hp = new HomePage(driver);
+		
 		System.out.println(lp.getInvalidUserErrorMessage());
 		String actual=lp.getInvalidUserErrorMessage();
 		String expected="×\n"
