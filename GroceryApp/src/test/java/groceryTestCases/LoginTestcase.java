@@ -67,7 +67,7 @@ public class LoginTestcase extends BaseClass {
 		String expected="[×\n"
 				+ "Alert!\n"
 				+ "Invalid Username/Password]";			
-		Assert.assertEquals(actual, expected);
+		Assert.assertEquals(actual, expected,Constant.loginError);
 		
 	}
 }
