@@ -12,12 +12,12 @@ import elementRepository.HomePage;
 import elementRepository.LoginPage;
 
 import utilities.Fakerutility;
-import utilities.WaitExplicit;
+
 
 public class LoginTestcase extends BaseClass {
 	// to access driver, url access etc, extending the base class to avail them
 
-	@Test(groups = { "critical" })
+	@Test(groups = { "critical" },retryAnalyzer=listener.Retry.class)
 	public void verifyLogin() throws IOException {
 		LoginPage lp = new LoginPage(driver);
 		readFromProperties();
@@ -28,8 +28,6 @@ public class LoginTestcase extends BaseClass {
 		lp.clickLoginbutton();
 		HomePage hp = new HomePage(driver);
 
-		WaitExplicit we=new WaitExplicit();
-		we.waitForExplicit(driver, hp.xpathHomePageText);
 		String actual = hp.getUserText();
 		String expected = "Admin";
 		Assert.assertEquals(actual, expected, Constant.loginError);
@@ -64,9 +62,9 @@ public class LoginTestcase extends BaseClass {
 		
 		System.out.println(lp.getInvalidUserErrorMessage());
 		String actual=lp.getInvalidUserErrorMessage();
-		String expected="[×\n"
+		String expected="×\n"
 				+ "Alert!\n"
-				+ "Invalid Username/Password]";			
+				+ "Invalid Username/Password";			
 		Assert.assertEquals(actual, expected,Constant.loginError);
 		
 	}

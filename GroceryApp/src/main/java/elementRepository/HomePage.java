@@ -1,6 +1,6 @@
 package elementRepository;
 
-import org.apache.xmlbeans.impl.xb.xsdschema.Public;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,9 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 
 import utilities.GeneralUtilities;
 
+import utilities.WaitUtilities;
+
 public class HomePage {
 	
 	GeneralUtilities gu=new GeneralUtilities();
+	WaitUtilities wu=new WaitUtilities();
 
 	public HomePage(WebDriver driver) {
 		this.driver=driver;
@@ -38,16 +41,20 @@ public class HomePage {
 	return gu.getColorCssValue(manageUsers);
 	}
 	public String getUserText() {
+		wu.presenceOfElement(driver, "//a[@data-toggle='dropdown']");
 		return gu.getElementText(user);
 	}
 	public String getHomePageText() {
+		wu.presenceOfText(driver, homePageText,"7rmart supermarket" );
 		return gu.getElementText(homePageText);
 	}
 	public void clickManageOrders() {
+		
 		gu.clickButton(manageOrders);
 	}
 	
 	public void clickmanageSlider() {
 		gu.clickButton(manageSlider);
 	}
+	
 }

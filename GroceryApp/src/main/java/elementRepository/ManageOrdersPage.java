@@ -8,9 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.GeneralUtilities;
+import utilities.WaitUtilities;
 
 public class ManageOrdersPage {
 	GeneralUtilities gu =new GeneralUtilities();
+	WaitUtilities wu=new WaitUtilities();
 	
 	public ManageOrdersPage(WebDriver driver) {
 		this.driver=driver;
@@ -27,6 +29,7 @@ public class ManageOrdersPage {
 
 	
 	public void clickOnSearchButtonInManageOrdersPage() {
+		wu.elementToBeClickable(driver, searchButton);
 		gu.clickButton(searchButton);
 	}
 	public void enterOrderIdInManageOrderPageSearch() {
