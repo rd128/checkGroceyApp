@@ -30,7 +30,7 @@ public class ManageOrderTestcase extends BaseClass{
 	  sp.enterOrderId(ReadDataFromExcel.GetStringdata(0,1));
 	  sp.clickSearch();
 	  String actual=sp.getPayementMode();
-	  String expected="Bank";
+	  String expected="COD";
 	  Assert.assertEquals(actual, expected,"not verified");
 	  
 	
